@@ -1,3 +1,15 @@
 h1 {
   background-color:rgb(195, 176, 10);
 }
+
+#cards-ctn {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.card {
+  width: 300px;
+  margin: 5px;
+  text-align: center;
+}
