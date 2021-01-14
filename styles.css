@@ -1,15 +1,61 @@
-h1 {
-  background-color:rgb(195, 176, 10);
-}
 
-#cards-ctn {
+#cards {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  flex-wrap: wrap;
 }
 
 .card {
   width: 300px;
   margin: 5px;
   text-align: center;
+}
+
+.add-book-btn {
+  position: relative;
+}
+
+.new-book-btn {
+  position: absolute;
+  right: 40px;
+  bottom: 40px;
+  background-color: rgb(13, 120, 198);
+  color: white;
+  border: none;
+  height: 80px;
+  width: 80px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0 0 0 1px;
+  border-radius: 50%;
+
+}
+
+.add-book {
+  display: none;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  right: 0;
+  width: 300px;
+  margin: 5% auto;
+  border: 0.5px solid rgba(168, 195, 212, 0.69);
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 30px 0px;
+  background-color: white;;
+  z-index: 99;
+  border-radius: 10px;
+}
+
+.read-status:hover {
+  text-decoration: underline;
+}
+
+.book-del-btn {
+  position: absolute;
+  right: 0;
+  height: 20px;
+  width: 20px;
+}
+
+.book-del-btn:hover {
+  font-weight: bold;
 }
