@@ -1,46 +1,48 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>JS Library</title>
-    <link rel="shortcut icon" href="">
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
-    <script src="https://kit.fontawesome.com/2953fa26a1.js" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <nav class="navbar navbar-expand-sm navbar-dark bg-info">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>JS Library</title>
+  <link rel="shortcut icon" href="">
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous" />
+  <script src="https://kit.fontawesome.com/2953fa26a1.js" crossorigin="anonymous"></script>
+</head>
+
+<body class="bg-light">
+  <nav class="navbar navbar-expand-sm navbar-dark">
     <div class="container">
       <h2 class="text-light"><i class="fas fa-book"></i> JS_Library<h2>
     </div>
   </nav>
 
-<div class="pt-5 bg-light" id="cards">
+  <div class="pt-5" id="cards">
   </div>
 
-<div class="add-book-btn">
-  <button class="new-book-btn" onclick="openForm()"><i class="fas fa-plus fa-lg"></i></button>
-</div>
+  <div class="add-book-btn">
+    <button class="new-book-btn" onclick="openForm()"><i class="fas fa-plus fa-lg"></i></button>
+  </div>
 
   <div class="add-book" id="form-container">
     <form id="form">
       <h1 class="d-flex justify-content-center pt-2">New Book</h1>
 
-        <div class="form-group p-2">
-        <label for ="book-name">Title:</label>
-        <input id="book-name" type="text" class="form-control" placeholder="The Great Gatsby" name="Title" value="" required>
+      <div class="form-group p-2">
+        <label for="book-name">Title:</label>
+        <input id="book-name" type="text" class="form-control" placeholder="The Great Gatsby" name="Title" value="" required/>
       </div>
 
-        <div class="form-group p-2">
-        <label for ="author-name">Author:</label>
-        <input id="author-name" type="text" class="form-control" placeholder="F. Scott Fitzgerald" name="Author" value="" required>
+      <div class="form-group p-2">
+        <label for="author-name">Author:</label>
+        <input id="author-name" type="text" class="form-control" placeholder="F. Scott Fitzgerald" name="Author" value="" required/>
       </div>
 
-        <div class="form-group p-2">
-        <label for ="book-pages">Pages:</label>
-        <input id="book-pages" type="text" class="form-control" name="Pages" placeholder="1-20,000" value="" min="1" max="20000" required>
+      <div class="form-group p-2">
+        <label for="book-pages">Pages:</label>
+        <input id="book-pages" type="text" class="form-control" name="Pages" placeholder="1-20,000" value="" min="1" max="20000" required/>
       </div>
 
       <div class="p-2">
@@ -48,12 +50,13 @@
         <input id="book-status" type="checkbox" class="form-check-input" value="">
       </div>
 
-        <div class="button w-100 d-flex justify-content-center pb-2">
-          <button class="add-btn btn btn-primary m-2" type="button" form="form" onclick="submitFrom()">Add</button>
-          <button class="cancel-btn btn btn-secondary m-2" type="button" onclick="closeForm()">Close</button>
-        </div>
-</form>
-</div>
-    <script src="script.js"></script>
-  </body>
+      <div class="button w-100 d-flex justify-content-center pb-2">
+        <button class="add-btn btn btn-primary m-2" type="button" form="form" onclick="submitForm()">Add</button>
+        <button class="cancel-btn btn btn-secondary m-2" type="button" onclick="closeForm()">Close</button>
+      </div>
+    </form>
+  </div>
+  <script src="script.js"></script>
+</body>
+
 </html>
