@@ -8,26 +8,27 @@ const formCtn = document.getElementById('form-container');
 // Array holds books
 let myLibrary = [];
 //create book properties
-function Book(title, author, pages, read) {
-  this.title = title;
-  this.author = author;
-  this.pages = pages;
-  this.read = read;
-}
+class Book {
+  constructor(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
+  }
+  //the form submits a new book card
+  addBook() {
+    this.title = document.getElementById('book-name').value;
+    this.author = document.getElementById('author-name').value;
+    this.pages = document.getElementById('book-pages').value;
+    this.read = document.getElementById('book-status').checked;
 
-//the form submits
-function addBook() {
-  title = document.getElementById('book-name').value;
-  author = document.getElementById('author-name').value;
-  pages = document.getElementById('book-pages').value;
-  read = document.getElementById('book-status').checked;
+    let addNewBook = new Book(this.title, this.author, this.pages, this.read);
+    myLibrary.push(addNewBook);
 
-  let addNewBook = new Book(title, author, pages, read);
-  myLibrary.push(addNewBook);
-
-  cards.querySelectorAll('.card').forEach(e => e.remove());
-  setData();
-  render();
+    cards.querySelectorAll('.card').forEach(e => e.remove());
+    setData();
+    render();
+  }
 }
 //create library, books displayed on cards
 function render() {
@@ -112,7 +113,8 @@ function submitForm() {
     alert('Please fill out correctly')
   } else {
     document.getElementById('book-pages').value;
-    addBook();
+    const add = new Book(title, author, pages);
+    add.addBook();
     formCtn.style.display = 'none';
     form.reset();
   }
